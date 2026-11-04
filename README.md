@@ -100,6 +100,18 @@ first connection, because Compose may start the API before PostgreSQL is ready.
 
 ## Local development
 
+### CI/CD mit einem lokalen GitHub-Runner
+
+Die Datei `.github/workflows/ci.yml` führt bei jedem Push und Pull Request
+folgende Prüfungen auf einem selbst gehosteten Windows-Runner aus:
+
+- Backend: `uv sync --dev`, Ruff und Pytest
+- Frontend: `npm ci` und Vite-Produktionsbuild
+
+Der Runner benötigt die Labels `self-hosted`, `windows` und `x64`. Eine
+Einrichtung als Windows-Dienst ist für die Abgabe nicht erforderlich; für den
+Nachweis kann der Runner im geöffneten PowerShell-Fenster laufen.
+
 ### Backend
 
 ```bash
