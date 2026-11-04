@@ -107,6 +107,7 @@ folgende Prüfungen auf einem selbst gehosteten Linux-Runner in WSL Ubuntu aus:
 
 - Backend: `uv sync --dev`, Ruff und Pytest
 - Frontend: `npm ci` und Vite-Produktionsbuild
+- Container: `docker compose build` für Backend- und Frontend-Image
 
 Der Runner benötigt die Labels `self-hosted`, `linux` und `x64`. Für den
 Nachweis kann der Runner im geöffneten Ubuntu-Terminal laufen.
